@@ -1,0 +1,5 @@
+# Require founder ownership for project instructions, application code, GitHub configuration, and future Supabase files.
+/.github/ @vinodeena
+/AGENTS.md @vinodeena
+/src/ @vinodeena
+/supabase/ @vinodeena

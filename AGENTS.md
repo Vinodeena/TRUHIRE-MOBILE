@@ -17,6 +17,7 @@
 ## Git workflow
 
 - Use a small, isolated feature branch for feature work. AI agents must never merge their own feature branches into `main` without the user's explicit approval. Prefer a reviewed GitHub pull request with all required checks passing before merge.
+- Follow [the AI engineering roles and handoffs](docs/engineering/ai-agent-roles.md), [the feature task template](.github/ISSUE_TEMPLATE/feature-task.md), and [the pull request evidence checklist](.github/PULL_REQUEST_TEMPLATE.md). Agents must never approve their own changes. Do not merge, deploy, change secrets, or alter database security policies without the founder's explicit approval. `.github/CODEOWNERS` assigns ownership to `@vinodeena`; GitHub enforcement depends on the file reaching the target branch and the repository's required-review settings.
 - Keep changes focused. Before finishing, inspect the complete diff and Git status for accidental changes, generated files, secrets, lockfile updates, and unrelated edits.
 - Do not change Git configuration or line-ending settings without the user's approval.
 - Report the exact files changed and summarize behavior changes. If a normal diff cannot show changes, state that limitation.
