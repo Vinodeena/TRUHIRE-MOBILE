@@ -1,11 +1,12 @@
+import type { ReactNode } from 'react';
 import { useColorScheme, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Colors, MaxContentWidth } from '@/constants/theme';
 
-type Props = { title: string; description: string };
+type Props = { title: string; description: string; note?: string; footer?: ReactNode };
 
-export default function PlaceholderScreen({ title, description }: Props) {
+export default function PlaceholderScreen({ title, description, note, footer }: Props) {
   const scheme = useColorScheme();
   const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
 
@@ -16,8 +17,9 @@ export default function PlaceholderScreen({ title, description }: Props) {
         <Text style={[styles.eyebrow, { color: colors.textSecondary }]}>TRUHIRE</Text>
         <Text style={[styles.title, { color: colors.text }]}>{title}</Text>
         <Text style={[styles.description, { color: colors.textSecondary }]}>{description}</Text>
+        {footer}
         <View style={[styles.note, { backgroundColor: colors.backgroundSelected, borderColor: colors.border }]}>
-          <Text style={[styles.noteText, { color: colors.textSecondary }]}>This is a preview screen. No account, profile, or employment data is connected.</Text>
+          <Text style={[styles.noteText, { color: colors.textSecondary }]}>{note ?? 'Tools on this screen are a preview and are not available yet.'}</Text>
         </View>
       </View>
     </SafeAreaView>
