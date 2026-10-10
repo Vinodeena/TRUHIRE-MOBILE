@@ -1,6 +1,5 @@
 import { Link } from 'expo-router';
-import { useColorScheme } from 'react-native';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useColorScheme, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { BottomTabInset, Colors, MaxContentWidth, Spacing } from '@/constants/theme';
